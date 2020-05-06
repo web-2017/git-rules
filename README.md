@@ -30,6 +30,8 @@ git push --force
 
 git reset --soft HEAD^
 
+git reset --soft HEAD^^ позволит "объединить" изменения последнего и предпоследнего коммитов.
+
 # как установить редактор по умолчанию git
 
 git config --global core.editor "ваш редактор"
