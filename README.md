@@ -32,6 +32,8 @@ git reset --soft HEAD^
 
 git reset --soft HEAD^^ позволит "объединить" изменения последнего и предпоследнего коммитов.
 
+# Вытащить из кэша .gitignore фаилы которые не игнорятся
+git rm -r --cached test.js
 # как установить редактор по умолчанию git
 
 git config --global core.editor "ваш редактор"
