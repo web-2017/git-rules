@@ -1,21 +1,15 @@
-# Перед merge request
+### Push процесс ветки
 
-git fetch -all
-git rebase origin/master
-git push origin Branche_Name\* \*Если ветка отстала от master: git push --force
+* git push
+* git push --force
 
-# Push процесс ветки
-
-Простые коммиты: git push
-Ammend коммиты: git push --force
-
-# Pull процесс ветки
+### Pull процесс ветки
 
 git fetch --all 2.1. Если последний был простой коммит: git pull 2.2. Если работа перетекла из офиса в дом или наоборот: git reset --hard origin Branche_Name
 
 ### Переименование ветки
-> git checkout branch-name
-> git branch -m branch-name
+* git checkout branch-name
+* git branch -m branch-name
 
 # Массовые операции над коммитами (удаление, переименование и т.д.)
 
