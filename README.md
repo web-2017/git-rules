@@ -13,18 +13,15 @@ Ammend коммиты: git push --force
 
 git fetch --all 2.1. Если последний был простой коммит: git pull 2.2. Если работа перетекла из офиса в дом или наоборот: git reset --hard origin Branche_Name
 
-# Переименование ветки
-git branch -m old_name new_name
+### Переименование ветки
+> git checkout branch-name
+> git branch -m branch-name
 
 # Массовые операции над коммитами (удаление, переименование и т.д.)
 
 git rebase -i HEAD~n (n-число последних коммитов на корректировку)
 Делаем изменения
 git push --force
-
-# Удаленное удаление несуществующих веток
-
-* git branch -m your-git-name
 
 # Удаленное удаление несуществующих веток
 
