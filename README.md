@@ -17,6 +17,9 @@ git rebase -i HEAD~n (n-число последних коммитов на ко
 Делаем изменения
 git push --force
 
+### Rename branch
+git branch -m <newname>
+
 # Удаленное удаление несуществующих веток
 
 > git fetch --prune
