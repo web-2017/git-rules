@@ -1,66 +1,54 @@
-### Push процесс ветки
+##### Push branch
 
-* git push
-* git push --force
+> git push | git push --force
 
-### Pull процесс ветки
+##### Pull remote branch
 
-git fetch --all 2.1. Если последний был простой коммит: git pull 2.2. Если работа перетекла из офиса в дом или наоборот: git reset --hard origin Branche_Name
+- git pull makes 2 command: 1. git fetch 2. git merge; to local branch
 
-### Переименование ветки
-* git checkout branch-name
-* git branch -m branch-name
+> git pull
 
-#### Массовые операции над коммитами (удаление, переименование и т.д.)
+##### Create new branch
 
-git rebase -i HEAD~n (n-число последних коммитов на корректировку)
-Делаем изменения
-git push --force
+> git branch [feature/login]
 
-#### Rename branch
-git branch -m <newname>
+##### DELETE local branch
 
-#### Удаленное удаление несуществующих веток
+> git branch -D [feature/login]
+
+##### DELETE remote branch
+
+> git push origin -D [feature/login]
+
+##### Rename branch
+
+> git checkout [feature/login]
+> git branch -m [feature/login]
+
+##### Edit last commit without creating new commit
+
+> git commit --amend
+
+##### Delete all remote merged branches
 
 > git fetch --prune
 
-#### выборочное удаление коммита
+##### clone remote branches
 
-git reset --soft HEAD^
+> git clone [git@github.com]
 
-git reset --soft HEAD^^ позволит "объединить" изменения последнего и предпоследнего коммитов.
+##### clone remote one branch
 
-#### Вытащить из кэша .gitignore фаилы которые не игнорятся
-git rm -r --cached test.js
-  
-#### как установить редактор по умолчанию git
+> git clone -b [branchname] --single-branch [remote-repo-url]
 
-> git config --global core.editor "ваш редактор"
+##### check all remote branches
 
-#### Как склеить коммиты squash
+> git branch -a
 
-Сначала узнаем, сколько коммитов нужно склеить. Эта команда покажет, какие коммиты у вас прибавились по сравнению с веткой master:
+##### Remove from git cache .gitignore current file
 
-> git cherry -v master
+> git rm -r --cached test.js
 
-А эта — сколько их всего:
+##### Set default editor code for git (VSCode)
 
-> git cherry -v master | wc -l
-
-затем:
-
-> git rebase -i HEAD~3
-
-флаг -i — значит в интерактивном режиме.
-
-> pick: 234432423 тут ваш коммит // на который хотим склейить
-
-> squash: 234432423 тут другой ваш коммит // удалятся
-
-> squash: 234432423 тут другой ваш коммит // удалятся
-
-То есть я говорю гиту «используй первый коммит, а остальные приклей к нему».
-выход с сохранением
-Гит склеивает коммиты и предлагает мне ввести коммит-месседж (показывает коммит-месседжи всех склеенных коммитов): комментируем # не нужные коммиты и сохраняем
-
-> git push --force
+> git config --global core.editor "code --wait"
