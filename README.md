@@ -25,9 +25,9 @@
 > git checkout [feature/login]
 > git branch -m [feature/login]
 
-##### Edit last commit without creating new commit
+##### Edit last commit without creating new commit (try not use it)
 
-> git commit --amend
+> git commit --amend --no-edit
 
 ##### Delete all remote merged branches
 
