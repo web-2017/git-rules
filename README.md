@@ -40,8 +40,8 @@
 
 ##### Hide changes
 
-> git stash // hide
-> git stash list // show list 
+> * git stash // hide
+> * git stash list // show list 
 > git stash apply // return stash
 > git stash clear // clear all stash
 
