@@ -1,3 +1,8 @@
+# Git rules cheatsheat 
+### most popular commands
+
+## Start 
+
 ##### Push branch
 
 > git push | git push --force
@@ -32,6 +37,12 @@
 ##### Delete all remote merged branches
 
 > git fetch --prune
+
+##### Hide changes
+
+> git stash // hide
+> git stash list // show list 
+> git stash apply // return stash
 
 ##### clone remote branches
 
