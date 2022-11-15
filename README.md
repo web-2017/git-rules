@@ -3,6 +3,11 @@
 
 ## Start 
 
+**Config - setup git**
+
+	git config --global user.name "Username"
+	git config --global user.email "some@email.com"
+
 ##### Push branch
 
 > git push | git push --force
