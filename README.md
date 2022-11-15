@@ -67,14 +67,11 @@
 	git stash apply	stash@{0}  						#return stash stash@{0}
 	git stash clear 							#clear all stash
 
-##### check all remote branches
+**List branches**
 
-> git branch -a
+	git branch -a
 
-##### Remove from git cache .gitignore current file
 
-> git rm -r --cached test.js
-
-##### Set default editor code for git (VSCode)
+## Set default editor code for git (VSCode)
 
 > git config --global core.editor "code --wait"
