@@ -43,6 +43,11 @@
 
 > git push origin -D [feature/login]
 
+**Remove files from cache**
+
+	git rm --cached [file_name]
+	git rm --cached -r [dir_name]
+
 ##### Rename branch
 
 > * git checkout [feature/login]
@@ -57,12 +62,14 @@ then
 
 > git fetch --prune
 
-##### Hide changes
+**Hide changes**
 
-> * git stash // hide
-> * git stash list // show list 
-> * git stash apply // return stash
-> * git stash clear // clear all stash
+	git stash						#hide
+	git stash save "your message" 
+	git stash list  					#show list 
+	git stash apply						#return stash
+	git stash apply	stash@{0}  				#return stash stash@{0}
+	git stash clear 					#clear all stash
 
 ##### clone remote branches
 
