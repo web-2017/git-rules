@@ -40,6 +40,11 @@
 	git branch -D [feature/login]				#local branch
 	git push origin -d [feature/login]			#remote branch
 
+**Remove references to remote branches that have already been deleted**
+
+	git fetch --prune					#local
+	git fetch --prune origin				#remote
+
 **Remove files from cache**
 
 	git rm --cached [file_name]
@@ -54,10 +59,6 @@ then
 ##### Edit last commit without creating new commit (try not use it)
 
 > git commit --amend --no-edit
-
-##### Delete all remote merged branches
-
-> git fetch --prune
 
 **Hide changes**
 
