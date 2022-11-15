@@ -35,13 +35,10 @@
 
 > git branch [feature/login]
 
-##### DELETE local branch
-
-> git branch -D [feature/login]
-
-##### DELETE remote branch
-
-> git push origin -D [feature/login]
+**DELETE**
+ 
+	git branch -D [feature/login]				#local branch
+	git push origin -d [feature/login]			#remote branch
 
 **Remove files from cache**
 
