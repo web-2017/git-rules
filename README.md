@@ -16,11 +16,10 @@
 	
 **Clone**
 
-	git clone ~/existing_repo ~/new/repo
-	git clone git://host.org/project.git
-	git clone ssh://user@host.org/project.git
 	git clone [url]                      
-	git clone [url] myFolder 
+	git clone [url] myFolder
+	git clone ssh://user@host.org/project.git
+	git clone -b [branchname] --single-branch [remote-repo-url]		#clone only one branch
 	
 **Push branch**
 
@@ -31,51 +30,42 @@
 	git pull makes 2 command: 1. git fetch 2. git merge; to local branch
 	git pull
 
-##### Create new branch
+**Create new branch**
 
-> git branch [feature/login]
+	git branch [feature/login]
 
 **DELETE**
  
-	git branch -D [feature/login]				#local branch
-	git push origin -d [feature/login]			#remote branch
+	git branch -D [feature/login]						#local branch
+	git push origin -d [feature/login]					#remote branch
 
 **Remove references to remote branches that have already been deleted**
 
-	git fetch --prune					#local
-	git fetch --prune origin				#remote
+	git fetch --prune							#local
+	git fetch --prune origin						#remote
 
 **Remove files from cache**
 
 	git rm --cached [file_name]
 	git rm --cached -r [dir_name]
 
-##### Rename branch
+**Rename branch**
 
-> * git checkout [feature/login]
-then
-> * git branch -m [feature/login]
+	git checkout [feature/login]
+	git branch -m [feature/login]
 
-##### Edit last commit without creating new commit (try not use it)
+**Edit last commit without creating new commit (try not use it)**
 
-> git commit --amend --no-edit
+	git commit --amend --no-edit
 
 **Hide changes**
 
-	git stash						#hide
+	git stash								#hide
 	git stash save "your message" 
-	git stash list  					#show list 
-	git stash apply						#return stash
-	git stash apply	stash@{0}  				#return stash stash@{0}
-	git stash clear 					#clear all stash
-
-##### clone remote branches
-
-> git clone [git@github.com]
-
-##### clone remote one branch
-
-> git clone -b [branchname] --single-branch [remote-repo-url]
+	git stash list  							#show list 
+	git stash apply								#return stash
+	git stash apply	stash@{0}  						#return stash stash@{0}
+	git stash clear 							#clear all stash
 
 ##### check all remote branches
 
