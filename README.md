@@ -24,13 +24,12 @@
 	
 **Push branch**
 
-> git push | git push --force
+	git push | git push --force
 
-##### Pull remote branch
+**Pull remote branch**
 
-- git pull makes 2 command: 1. git fetch 2. git merge; to local branch
-
-> git pull
+	git pull makes 2 command: 1. git fetch 2. git merge; to local branch
+	git pull
 
 ##### Create new branch
 
